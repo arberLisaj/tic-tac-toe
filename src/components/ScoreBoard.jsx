@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 
 const ScoreBoard = ({ playerX, playerO }) => {
   return (
@@ -15,14 +15,14 @@ const ScoreBoard = ({ playerX, playerO }) => {
         textAlign="center"
         sx={{ backgroundColor: "#e1f1fd", padding: "13px" }}
       >
-        Player x ( {playerX} wins )
+        Player X ( {playerX} )
       </Box>
       <Box
         width="50%"
         textAlign="center"
         sx={{ backgroundColor: "#FFD1DC", padding: "13px" }}
       >
-        Player o ( {playerO} wins)
+        Player O ( {playerO} )
       </Box>
     </Stack>
   );

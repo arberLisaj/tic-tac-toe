@@ -1,19 +1,19 @@
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, makeStyles } from "@mui/material";
 
 export default function Square({ value, onSquareClick }) {
-  const styles = {
-    height: "100%",
+  const squareStyles = {
     minHeight: "120px",
     minWidth: "120px",
     width: "100%",
     fontSize: "20px",
   };
 
+  makeStyles;
   return (
     <Grid item sm={4}>
       <Button
         variant="outlined"
-        sx={styles}
+        sx={squareStyles}
         className="square"
         onClick={onSquareClick}
       >
