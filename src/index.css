@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body,
+html,
+#root {
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+body {
+  padding: 10px;
+}
+
+button {
+  text-transform: capitalize !important;
+}

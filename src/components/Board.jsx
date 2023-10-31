@@ -1,3 +1,4 @@
+import { Container, Grid } from "@mui/material";
 import calculateWinner from "../calculateWinner";
 import Square from "./Square";
 
@@ -16,7 +17,7 @@ export default function Board({ xIsNext, squares, onPlay }) {
   }
 
   return (
-    <div className="board">
+    <Grid container className="board" spacing="5px" width="100%">
       {squares.map((s, index) => (
         <Square
           key={index}
@@ -24,6 +25,6 @@ export default function Board({ xIsNext, squares, onPlay }) {
           onSquareClick={() => handleClick(index)}
         />
       ))}
-    </div>
+    </Grid>
   );
 }
