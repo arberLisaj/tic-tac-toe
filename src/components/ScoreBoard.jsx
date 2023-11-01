@@ -1,6 +1,6 @@
 import { Box, Stack } from "@mui/material";
 
-const ScoreBoard = ({ playerX, playerO }) => {
+export default function ScoreBoard({ playerX, playerO }) {
   return (
     <Stack
       direction="flex"
@@ -12,20 +12,15 @@ const ScoreBoard = ({ playerX, playerO }) => {
     >
       <Box
         width="50%"
-        textAlign="center"
-        sx={{ backgroundColor: "#e1f1fd", padding: "13px" }}
+        // textAlign="center"
+        borderRight="1px solid gainsboro"
+        sx={{ padding: "13px" }}
       >
         Player X ( {playerX} )
       </Box>
-      <Box
-        width="50%"
-        textAlign="center"
-        sx={{ backgroundColor: "#FFD1DC", padding: "13px" }}
-      >
+      <Box width="50%" sx={{ padding: "13px" }}>
         Player O ( {playerO} )
       </Box>
     </Stack>
   );
-};
-
-export default ScoreBoard;
+}

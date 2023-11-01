@@ -28,7 +28,11 @@ export default function App() {
     if (move > 0) {
       return (
         <Grid item key={move}>
-          <Button variant="contained" onClick={() => jumpTo(move)}>
+          <Button
+            variant="outlined"
+            color="secondary"
+            onClick={() => jumpTo(move)}
+          >
             {"move #" + move}
           </Button>
         </Grid>
@@ -54,7 +58,6 @@ export default function App() {
     jumpTo(0);
     setHistory([Array(9).fill(null)]);
   }
-
   return (
     <>
       <ScoreBoard playerX={gamesWonByX} playerO={gamesWonByO} />
@@ -66,22 +69,19 @@ export default function App() {
           borderRadius: "6px",
         }}
       >
-        <Typography variant="h5" paddingBottom="10px">
-          {status}
-        </Typography>
-        <Grid container maxWidth="md" spacing={1}>
-          <Grid item md={6} sm={12}>
+        <Grid container maxWidth="md" spacing="10px">
+          <Grid item md={6}>
             <Board
               xIsNext={xIsNext}
               squares={currentSquares}
               onPlay={handlePlay}
             />
           </Grid>
-          <Grid item md={6} sm={12}>
-            <Grid container spacing={1}>
-              <Grid item sm={12} md={12}>
+          <Grid item md={6} sx={{ width: "100%" }}>
+            <Grid container spacing="5px" width="100%">
+              <Grid item width="100%" md={12}>
                 <Button
-                  variant="contained"
+                  variant="outlined"
                   color="error"
                   sx={{ width: "100%" }}
                   size="large"

@@ -10,11 +10,11 @@ export default function Square({ value, onSquareClick }) {
 
   makeStyles;
   return (
-    <Grid item sm={4}>
+    <Grid item xs={4} sm={4}>
       <Button
         variant="outlined"
         sx={squareStyles}
-        className="square"
+        color="secondary"
         onClick={onSquareClick}
       >
         {value}
