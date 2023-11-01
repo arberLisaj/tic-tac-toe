@@ -29,6 +29,7 @@ export default function App() {
       return (
         <Grid item key={move}>
           <Button
+            type="button"
             variant="outlined"
             color="secondary"
             onClick={() => jumpTo(move)}
@@ -81,6 +82,7 @@ export default function App() {
             <Grid container spacing="5px" width="100%">
               <Grid item width="100%" md={12}>
                 <Button
+                  type="button"
                   variant="outlined"
                   color="error"
                   sx={{ width: "100%" }}

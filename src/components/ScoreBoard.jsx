@@ -12,7 +12,6 @@ export default function ScoreBoard({ playerX, playerO }) {
     >
       <Box
         width="50%"
-        // textAlign="center"
         borderRight="1px solid gainsboro"
         sx={{ padding: "13px" }}
       >

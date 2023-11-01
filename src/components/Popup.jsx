@@ -8,6 +8,7 @@ export default function Popup({ state, handleClose, playerName }) {
           Winner is Player {playerName}
         </Typography>
         <Button
+          type="button"
           variant="outlined"
           color="secondary"
           sx={{ display: "block", margin: "auto" }}
