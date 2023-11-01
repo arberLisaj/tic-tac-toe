@@ -32,6 +32,7 @@ export default function App() {
             type="button"
             variant="outlined"
             color="secondary"
+            aria-label="go to given position"
             onClick={() => jumpTo(move)}
           >
             {"move #" + move}
@@ -82,6 +83,7 @@ export default function App() {
             <Grid container spacing="5px" width="100%">
               <Grid item width="100%" md={12}>
                 <Button
+                  aria-label="restart game"
                   type="button"
                   variant="outlined"
                   color="error"

@@ -11,6 +11,7 @@ export default function Popup({ state, handleClose, playerName }) {
           type="button"
           variant="outlined"
           color="secondary"
+          aria-label="play again"
           sx={{ display: "block", margin: "auto" }}
           onClick={handleClose}
         >

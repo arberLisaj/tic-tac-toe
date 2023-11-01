@@ -13,6 +13,7 @@ export default function Square({ value, onSquareClick }) {
     <Grid item xs={4} sm={4}>
       <Button
         type="button"
+        aria-label="square"
         variant="outlined"
         sx={squareStyles}
         color="secondary"
