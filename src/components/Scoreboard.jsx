@@ -1,6 +1,6 @@
 import { Box, Stack } from "@mui/material";
 
-export default function ScoreBoard({ playerX, playerO }) {
+function Scoreboard({ playerX, playerO }) {
   return (
     <Stack
       direction="flex"
@@ -23,3 +23,5 @@ export default function ScoreBoard({ playerX, playerO }) {
     </Stack>
   );
 }
+
+export default Scoreboard;

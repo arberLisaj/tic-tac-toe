@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
-import calculateWinner from "../calculateWinner";
+import calculateWinner from "../utils/calculateWinner";
 import Square from "./Square";
 
-export default function Board({ xIsNext, squares, onPlay }) {
+function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
       return;
@@ -28,3 +28,5 @@ export default function Board({ xIsNext, squares, onPlay }) {
     </Grid>
   );
 }
+
+export default Board;

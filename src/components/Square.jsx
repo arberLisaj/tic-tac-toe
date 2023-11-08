@@ -1,21 +1,18 @@
-import { Button, Grid, makeStyles } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 
-export default function Square({ value, onSquareClick }) {
-  const squareStyles = {
-    minHeight: "120px",
-    minWidth: "120px",
-    width: "100%",
-    fontSize: "20px",
-  };
-
-  makeStyles;
+function Square({ value, onSquareClick }) {
   return (
     <Grid item xs={4} sm={4}>
       <Button
         type="button"
         aria-label="square"
         variant="outlined"
-        sx={squareStyles}
+        sx={{
+          minHeight: "120px",
+          minWidth: "120px",
+          width: "100%",
+          fontSize: "20px",
+        }}
         color="secondary"
         onClick={onSquareClick}
       >
@@ -24,3 +21,5 @@ export default function Square({ value, onSquareClick }) {
     </Grid>
   );
 }
+
+export default Square;

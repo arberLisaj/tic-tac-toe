@@ -1,11 +1,11 @@
-import { Button, Container, Grid, Typography } from "@mui/material";
+import { Button, Container, Grid } from "@mui/material";
 import { useEffect, useState } from "react";
-import calculateWinner from "./calculateWinner";
 import Board from "./components/Board";
 import Popup from "./components/Popup";
-import ScoreBoard from "./components/ScoreBoard";
+import Scoreboard from "./components/Scoreboard";
+import calculateWinner from "./utils/calculateWinner";
 
-export default function App() {
+function App() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
   const [gamesWonByX, setGamesWonByX] = useState(0);
@@ -51,8 +51,8 @@ export default function App() {
   }
 
   useEffect(() => {
-    if (winner == "X") setGamesWonByX((prevGames) => prevGames + 1);
-    if (winner == "O") setGamesWonByO((prevGames) => prevGames + 1);
+    if (winner === "X") setGamesWonByX((prevGames) => prevGames + 1);
+    if (winner === "O") setGamesWonByO((prevGames) => prevGames + 1);
     if (winner) setPopUpState(true);
   }, [winner]);
 
@@ -62,7 +62,7 @@ export default function App() {
   }
   return (
     <>
-      <ScoreBoard playerX={gamesWonByX} playerO={gamesWonByO} />
+      <Scoreboard playerX={gamesWonByX} playerO={gamesWonByO} />
       <Container
         maxWidth="md"
         sx={{
@@ -110,3 +110,5 @@ export default function App() {
     </>
   );
 }
+
+export default App;
